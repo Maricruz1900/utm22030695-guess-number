@@ -16,27 +16,3 @@ def guess_number():
 #with randit we create a random number from the selected range 
     random_number = random.randint(number1, number2)
     points = 100
-# create a loop in which if you make a mistake, we lower your score by ten points and if you win, a congratulatory message is sent. 
-    while True:
-        print("Guess the random number!")
-        guess = int(input("Guess the number: "))
-
-        if guess == random_number:
-            print("Congratulations! You guessed the random number!")
-            print("Player 2 has won!!")
-            break
-        else:
-            print("Incorrect!")
-            points -= 10
-            if points == 0:
-                print("You have lost all your points!")
-                print("Player 1 has won!")
-                break
-            elif guess < random_number:
-                print("The number is greater. You lose 10 points. Remaining points:", points)
-            else:
-                print("The number is smaller. You lose 10 points. Remaining points:", points)
-
-    print("Game over.")
-# send to call the start function 
-guess_number()
